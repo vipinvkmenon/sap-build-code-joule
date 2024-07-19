@@ -1,0 +1,878 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../setup/">
+      
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>Full-Stack SAP Fiori Application with Joule in SAP Build Code - Build Code With Joule</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-a-full-stack-sap-fiori-application-with-joule-in-sap-build-code" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Build Code With Joule" class="md-header__button md-logo" aria-label="Build Code With Joule" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Build Code With Joule
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Full-Stack SAP Fiori Application with Joule in SAP Build Code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/vipinvkmenon/sap-build-code-joule" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Build Code With Joule" class="md-nav__button md-logo" aria-label="Build Code With Joule" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Build Code With Joule
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/vipinvkmenon/sap-build-code-joule" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Build Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Full-Stack SAP Fiori Application with Joule in SAP Build Code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Full-Stack SAP Fiori Application with Joule in SAP Build Code
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#you-will-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      You will learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-project-using-sap-build-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a New Project Using SAP Build Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-data-entities-with-joule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Data Entities with Joule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhance-the-sample-data-using-joule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhance the Sample Data Using Joule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-application-logic-with-joule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Application Logic with Joule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ui-to-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add UI to the Application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#you-will-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      You will learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-project-using-sap-build-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a New Project Using SAP Build Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-data-entities-with-joule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Data Entities with Joule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhance-the-sample-data-using-joule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhance the Sample Data Using Joule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-application-logic-with-joule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Application Logic with Joule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ui-to-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add UI to the Application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="create-a-full-stack-sap-fiori-application-with-joule-in-sap-build-code">Create a Full-Stack SAP Fiori Application with Joule in SAP Build Code</h1>
+<!-- description -->
+<p>In this tutorial, you will use the Generative AI capabilities of Joule to create a CAP service with SAP Build Code. </p>
+<h2 id="you-will-learn">You will learn</h2>
+<ul>
+<li>To leverage the power of Joule in SAP Build Code</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>You have an SAP BTP Trial account <a href="https://developers.sap.com/tutorials/hcp-create-trial-account.html">Get a Free Account on SAP BTP Trial</a>.</li>
+<li>You have completed the <a href="https://developers.sap.com/tutorials/build-code-setup.html">Setup SAP Build Code</a> tutorial. </li>
+</ul>
+<p>Check following rolecollections are assigned to your user. If not <strong>Assign the role collections</strong></p>
+<ul>
+<li>Build Code Administrator </li>
+<li>Business Application Studio Administrator</li>
+</ul>
+<p><img alt="" src="../assets/roles2.png" /></p>
+<h3 id="create-a-new-project-using-sap-build-code">Create a New Project Using SAP Build Code</h3>
+<blockquote>
+<p><strong>Note</strong> This tutorial assumes that you are using an SAP BTP Trial account. If you are using a different account, some steps might be different.</p>
+</blockquote>
+<ol>
+<li>Navigate to the SAP Build lobby.</li>
+<li>
+<p>Click <strong>Create</strong> to start the creation process.<br />
+<br>
+    <!-- border --><img alt="Create" src="../assets/create1.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Build an Application</strong> tile.</p>
+<p><!-- border --><img alt="Build an Application" src="../assets/build-application-tile-cropped.png" /></p>
+</li>
+<li>
+<p>Click the <strong>SAP Build Code</strong> tile to develop your project in SAP Business Application Studio, the SAP Build Code development environment, leveraging the capabilities of the services included in SAP Build Code.</p>
+<p><!-- border --><img alt="SAP Build Code" src="../assets/sap-build-code-tile-cropped.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Full-Stack Application</strong> tile.</p>
+<p><!-- border --><img alt="" src="../assets/15red.png" /></p>
+</li>
+<li>
+<p>Enter a name for your project.</p>
+</li>
+<li>
+<p>Select the dev space where you want the project to reside.
+    &gt;SAP Build Code recommends the dev space it deems most suitable, and it will automatically create a new one for you if you don't already have one. If you have other dev spaces of the same type (for example, Full-Stack), you can select between them. If you want to create a different dev space, or a dev space or another type, go to the Dev Space Manager. See <a href="https://help.sap.com/docs/build_code/d0d8f5bfc3d640478854e6f4e7c7584a/ad40d52d0bea4d79baaf9626509caf33.html?locale=en-US&amp;state=DRAFT&amp;version=SHIP">Working in the Dev Space Manager</a>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+<p><!-- border --><img alt="Create" src="../assets/ClickCreate.png" /></p>
+<p>You can see the project being created in the Project table of the lobby.  </p>
+<blockquote>
+<p>The creation of the project may take a few moments.</p>
+</blockquote>
+<p><!-- border --><img alt="Creating" src="../assets/creating-pilot.png" /></p>
+</li>
+<li>
+<p>After you see a message stating that the project has been created successfully, click the project to open it.</p>
+<p><!-- border --><img alt="Open Project" src="../assets/open-project-pilot.png" /></p>
+<p>The project opens in SAP Business Application Studio, the SAP Build Code development environment.</p>
+<p><!-- border --><img alt="SAP Business Application Studio" src="../assets/19.png" /></p>
+</li>
+</ol>
+<h3 id="create-data-entities-with-joule">Create Data Entities with Joule</h3>
+<p>Let's create an application for a customer loyalty program. The customer can get bonus points by purchasing products and can redeem these points. </p>
+<blockquote>
+<p><strong>Note:</strong> Joule is a Generative AI assistant that will create code for you. The code might be different every time you trigger the prompt, so the examples shown in the tutorial might not be exactly the same as what you see in your system.</p>
+</blockquote>
+<ol>
+<li>
+<p>In SAP Business Application Studio, the SAP Build Code development environment, open the digital assistant, Joule, from the activity bar.</p>
+<p><!-- border --><img alt="Open Joule" src="../assets/21.png" /></p>
+<blockquote>
+<p>Note: If you do not see the icon, click Additional Views and select <strong>Joule</strong> from the list.
+<img alt="Find Joule icon" src="../assets/additional_views.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>Click <strong>Open Guide</strong>. </p>
+</li>
+<li>
+<p>Expand the <strong>Data Model and Service Creation</strong> section, and click <strong>Open Joule</strong>.</p>
+<p><!-- border --><img alt="Open Joule2" src="../assets/22.png" /></p>
+</li>
+<li>
+<p>Copy the prompt below.</p>
+<div class="highlight"><pre><span></span><code>Design a customer loyalty program application. 
+Define 4 data entities: Customers, Products, Purchases and Redemptions. 
+Each customer must have the following fields: name, email, 7-digit customer number, total purchase value, total reward points, total redeemed reward points. 
+All fields for each customer should be integer except name and email that will be stored as string. 
+Each product should have a name, description and price. 
+Purchases should include the following fields: purchase value, reward points. 
+All fields in Purchases must be integer. 
+Redemptions must have 1 field in integer: redeemed amount. 
+Each purchase and redemption will be associated to a customer. 
+Each purchase will be associated to a product and is called selectedProduct.
+</code></pre></div>
+</li>
+<li>
+<p>Paste the code in the text field, and click the arrow <img alt="send arrow" src="../assets/askjoule.png" /> to send the prompt to Joule.</p>
+<p><!-- border --><img alt="Enter Prompt" src="../assets/25.png" /> </p>
+<p>The code is generated and is displayed below your prompt. </p>
+</li>
+<li>
+<p>Accept the code. <br/></p>
+<p><!-- border --><img alt="accept" src="../assets/26.png" /></p>
+<p>Depending on the server, it may take a few moments for Joule to create the data models and services for you.<br></p>
+<p>Once you accept the code, you will see the update on the right side in the Storyboard tab.<br></p>
+<blockquote>
+<p><strong>Tip</strong>: To open the Storyboard, navigate to the <strong>Project Explorer</strong>, expand your project, and select <strong>Storyboard</strong>. </p>
+</blockquote>
+</li>
+</ol>
+<h3 id="enhance-the-sample-data-using-joule">Enhance the Sample Data Using Joule</h3>
+<!-- description -->
+<p>Joule created the CAP data model and the OData service. In addition, Joule created some sample data by default. We will now ask Joule to provide additional sample data.</p>
+<ol>
+<li>
+<p>Open the Sample Data editor in the Storyboard by selecting <strong>Open Editor</strong> -&gt; <strong>Sample Data</strong>.</p>
+<p><!-- border --><img alt="OpenEditor" src="../assets/31.png" /></p>
+</li>
+<li>
+<p>In the Sample Data Editor, select the <strong>Customers</strong> data entity, and add 5 more rows. Click <strong>Add</strong>.</p>
+<p><!-- border --><img alt="Click Add" src="../assets/32.png" /></p>
+</li>
+<li>
+<p>Click <strong>Enhance</strong>. This will reopen Joule to modify the sample data. </p>
+<p><!-- border --><img alt="Enhance" src="../assets/33a.png" /></p>
+</li>
+<li>
+<p>Copy the prompt below:</p>
+<div class="highlight"><pre><span></span><code>Enhance my sample data with meaningful data. Any phone numbers must be 10 digits long. 
+All customer numbers must be 7 digits long and one customer must use the customer number 1200547. 
+No fields may be empty. 
+Total purchase value must be smaller than 10000 not rounded. 
+Both total reward points and total redeemed reward points must not be rounded, must not be identical. and must always sum to one-tenth of the total purchase value for each customer.
+</code></pre></div>
+</li>
+<li>
+<p>Paste the prompt in the text field, and click the arrow (<img alt="send arrow" src="../assets/askjoule.png" />) to send the prompt to Joule.</p>
+<p><!-- border --><img alt="New Prompt" src="../assets/34a.png" /> </p>
+<p>The code is generated and is displayed below your prompt.</p>
+</li>
+<li>
+<p>Accept the code.
+    This will add the customer names, email addresses, and purchases. </p>
+<p><!-- border -->
+<img alt="Accept" src="../assets/36.png" /></p>
+</li>
+</ol>
+<h3 id="create-application-logic-with-joule">Create Application Logic with Joule</h3>
+<p>We already have created the data model, service, and sample data with Joule. Now we want to create some logic for our service. We would like to calculate the bonus points automatically when a customer makes a purchase. Additionally, we want to provide logic for customers to redeem these bonus points.</p>
+<ol>
+<li>
+<p>In the Storyboard, click on the <strong>Purchases</strong> entity under <strong>Services</strong>, and select <strong>Open in Graphical Modeler</strong>.</p>
+<p><!-- border --><img alt="Open in Graphical Modeler" src="../assets/41a.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Purchases</strong> entity by clicking on the title. Then, click <strong>Add Logic</strong>.</p>
+<p><!-- border --><img alt="Add Logic" src="../assets/42a.png" /></p>
+<blockquote>
+<p>If you do not see the entity, click the Show All icon.</p>
+<p><!-- border --><img alt="Show All icon" src="../assets/show_all.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>In the <strong>Add Application Logic</strong> dialog, leave the default values, and click <strong>Add</strong>.</p>
+<p><!-- border --><img alt="Add" src="../assets/43a.png" /></p>
+<p>The Application Logic Editor opens.</p>
+</li>
+<li>
+<p>In the <strong>Standard Event</strong> section, select <strong>Create</strong>. That means that this logic will be automatically executed if an OData create operation is requested. <br/> </p>
+<p><!-- border --><img alt="Add logic" src="../assets/44a.png" /></p>
+</li>
+<li>
+<p>Click <strong>Open Code Editor</strong>, and select <strong>Application Logic</strong>. This will open Joule again to allow us to send a prompt to Joule to create the logic for us.</p>
+<p><!-- border --><img alt="Create" src="../assets/45a.png" /></p>
+</li>
+<li>
+<p>Copy the prompt below:</p>
+<div class="highlight"><pre><span></span><code>Reward points of each purchase will be the one tenth of the purchase value. 
+Each purchase value will be added to the total purchase value of the related customer. 
+Each reward point will be added to the total reward points of the related customer.
+</code></pre></div>
+</li>
+<li>
+<p>Paste the prompt in the text field, and click the arrow (<img alt="Send prompt" src="../assets/prompt_arrow.png" />) to send the prompt to Joule.</p>
+<p><!-- border --><img alt="Enter prompt" src="../assets/46a.png" /></p>
+<p>So Joule created code that implements the following logic:</p>
+<ul>
+<li>
+<p>Check if the customer exists</p>
+</li>
+<li>
+<p>Calculate the rewardPoints from the purchase value</p>
+</li>
+<li>
+<p>Update the total purchase value and the total reward points in the customers entity</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Accept the code. </p>
+<p><img alt="Add" src="../assets/48a.png" /></p>
+<blockquote>
+<p><strong>Note:</strong> Joule typically generates different code each time for the same prompt. If yours is different to what you can see here, that's fine as long as it does the same job.<br/> 
+If there are no obvious errors, just keep working on the exercise. If you  aren't sure, you can ask Joule to try again by clicking <strong>Regenerate</strong>.  </p>
+</blockquote>
+</li>
+<li>
+<p>Go back to the <code>service.cds</code> tab. </p>
+</li>
+<li>
+<p>Select the <strong>Redemptions</strong> entity by clicking on the title. Then, click <strong>Add Logic</strong>.</p>
+<p><!-- border --><img alt="Add logic" src="../assets/49a.png" /></p>
+<blockquote>
+<p>If you do not see the entity, click the Show All icon.
+<br/>
+<img alt="Show All icon" src="../assets/show_all.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>In the <strong>Add Application Logic</strong> dialog, leave the default values, and click <strong>Add</strong>.</p>
+<p><!-- border --><img alt="Add" src="../assets/49b.png" /></p>
+</li>
+<li>
+<p>In the <strong>Standard Event</strong> section, select <strong>Create</strong>.</p>
+<p><!-- border --><img alt="Add app logic" src="../assets/410a.png" /></p>
+</li>
+<li>
+<p>Click <strong>Open Code Editor</strong>, and select <strong>Application Logic</strong>. This will open Joule again to allow us to send a prompt to Joule to create the logic for us.</p>
+<p><!-- border --><img alt="open app logic editor" src="../assets/411a.png" /></p>
+</li>
+<li>
+<p>Copy the prompt below::</p>
+<div class="highlight"><pre><span></span><code>Deduct the redemption amount from the customer&#39;s total reward points and add that to their total redeemed points.
+</code></pre></div>
+</li>
+<li>
+<p>Paste the prompt in the text field, and click the arrow (<img alt="Send prompt" src="../assets/prompt_arrow.png" />) to send the prompt to Joule.</p>
+<p><!-- border --><img alt="Add prompt" src="../assets/413.png" /></p>
+</li>
+<li>
+<p>Accept the code. </p>
+<p><!-- border --><img alt="Accept the generated code" src="../assets/414.png" /></p>
+<p>Have a closer look at the generated code. It even includes some checks to see if the customer has enough points to redeem.</p>
+<p><!-- border --><img alt="generated code" src="../assets/415.png" /></p>
+</li>
+</ol>
+<h3 id="add-ui-to-the-application">Add UI to the Application</h3>
+<p>To display and test the content we created for the customer loyalty program, we need to create an SAP Fiori elements UI.</p>
+<ol>
+<li>
+<p>Go to back to the Storyboard and add a UI application.</p>
+<p><!-- border --><img alt="Add UI" src="../assets/51a.png" /></p>
+</li>
+<li>
+<p>We will start with the user interface for the <strong>Purchases</strong> data entity. 
+    Set the <strong>Display name</strong> to <strong>Purchases</strong> and the <strong>Description</strong> to <strong>Manage Purchases</strong>, and then click <strong>Next</strong>.</p>
+<p><!-- border --><img alt="UI details" src="../assets/52a.png" /></p>
+</li>
+<li>
+<p>We are using the browser, so we will select <strong>Template-Based Responsive Application</strong> as the UI Application type, and click <strong>Next</strong>.</p>
+<p><!-- border --><img alt="template based app" src="../assets/53a.png" /></p>
+</li>
+<li>
+<p>Select <strong>List Report Page</strong> as the UI application template, and click <strong>Next</strong>. </p>
+<p><!-- border --><img alt="template" src="../assets/54a.png" /></p>
+</li>
+<li>
+<p>Select <strong>Purchases</strong> as the <strong>Main entity</strong>, and click <strong>Finish</strong>. The page will be created now.</p>
+<p><!-- border --><img alt="data objects" src="../assets/55.png" /></p>
+<p>It might take a few moments for the UI to be created because the dependencies need to be installed. </p>
+</li>
+<li>
+<p>Repeat steps 2 through 5 to create additional UI apps for the <strong>Customers</strong> and the <strong>Redemptions</strong> entities.</p>
+<p><strong>Customer</strong>:</p>
+<ul>
+<li>Display name: <strong>Customers</strong> <br/></li>
+<li>Description: <strong>Manage Customers</strong></li>
+<li>UI Application type: <strong>Template-Based Responsive Application</strong> <br/></li>
+<li>UI Application Template: <strong>List Report Page</strong> <br/></li>
+<li>Main Entity: <strong>Customers</strong> <br/></li>
+</ul>
+<p><strong>Redemptions</strong>:</p>
+<ul>
+<li>Display name: <strong>Redemptions</strong> <br/></li>
+<li>Description: <strong>Manage Redemptions</strong> <br/></li>
+<li>UI Application type: <strong>Template-Based Responsive Application</strong> <br/></li>
+<li>UI Application Template: <strong>List Report Page</strong> <br/></li>
+<li>Main Entity: <strong>Redemptions</strong> <br/></li>
+</ul>
+<p>And that's it! You've created an application.</p>
+</li>
+<li>
+<p>To preview your application, once the files have been generated, go to the upper-right corner, and click <img alt="preview" src="../assets/playgreen.png" /> (Run and Debug).</p>
+<p><!-- border --><img alt="open app preview" src="../assets/56.png" /></p>
+<p>The application's preview is displayed.</p>
+<p><!-- border --><img alt="app preview" src="../assets/preview1.png" /></p>
+</li>
+<li>
+<p>Click <strong>Go</strong>.</p>
+<p><!-- border --><img alt="app preview" src="../assets/preview2.png" /></p>
+<p>The customer information is displayed.</p>
+<p><!-- border --><img alt="app preview" src="../assets/preview3.png" /></p>
+</li>
+<li>
+<p>From the dropdown list at the top of the page, select <strong>Home</strong> to go back and preview the other applications.</p>
+<p><!-- border --><img alt="app preview" src="../assets/preview4.png" /></p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
