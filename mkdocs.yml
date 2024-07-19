@@ -1,0 +1,30 @@
+site_name: Build Code With Joule
+repo_url: https://github.com/vipinvkmenon/sap-build-code-joule
+theme:
+  name: material
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: purple
+  font:
+    text: Roboto
+    code: Roboto Mono
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.progressbar
+  - attr_list
+  - md_in_html
+  - tables
+  - attr_list
+nav:
+- Welcome: "index.md"
+- Setup Build Code: "setup.md"
+- Full-Stack SAP Fiori Application with Joule in SAP Build Code: "build-code-app.md"
